@@ -22,11 +22,11 @@ Titel, Abteilung, Initialen, Beschreibung etc.
 Das Skript kann direkt über PowerShell aus GitHub/GitLab ausgeführt werden:
 
 powershell
-Invoke-RestMethod -Uri "https://raw.githubusercontent.com/cptmittelstrahl42/AD-Testuumgebung/main/ad-setup.ps1" | Invoke-Expression
+Invoke-RestMethod -Uri "https://raw.githubusercontent.com/cptmittelstrahl42/AD-Testumgebung/main/ad-setup.ps1" | Invoke-Expression
 Alternativ zum Download:
 
 powershell
-Invoke-WebRequest -Uri "https://raw.githubusercontent.com/cptmittelstrahl42/AD-Testuumgebung/main/ad-setup.ps1" -OutFile "$env:TEMP\ad-setup.ps1"
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/cptmittelstrahl42/AD-Testumgebung/main/ad-setup.ps1" -OutFile "$env:TEMP\ad-setup.ps1"
 & "$env:TEMP\ad-setup.ps1"
 🧩 Voraussetzungen
 PowerShell mit Administratorrechten
