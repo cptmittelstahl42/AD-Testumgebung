@@ -1,4 +1,4 @@
-﻿# +--------------------------------------------+
+# +--------------------------------------------+
 # | Script zum Erstellen von OUs und Testuser  |
 # | Inkl. Gruppen, Gruppenzuordnung, Adressen  |
 # | Autor: Boettcher, Tim                      |
