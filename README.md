@@ -27,7 +27,7 @@ Alternativ zum Download:
 
 powershell
 Invoke-WebRequest -Uri "https://raw.githubusercontent.com/cptmittelstrahl42/AD-Testumgebung/main/ad-setup.ps1" -OutFile "$env:TEMP\ad-setup.ps1"
-& "$env:TEMP\ad-setup.ps1"
+
 🧩 Voraussetzungen
 PowerShell mit Administratorrechten
 
