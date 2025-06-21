@@ -62,14 +62,16 @@ $grouppath = "OU=_Gruppen,$parentpath"
 $password = "!Start123" | ConvertTo-SecureString -AsPlainText -Force
 
 # OU-Struktur erstellen
-$ous = @(
-    $firstou, "_Clients", "_Server", "_Terminalserver", "_User",
-    "_Gruppen", "_Verteilung", "_Sicherheit", "_Projekte", "_Standorte", "_Archiv"
-)
-foreach ($ou in $ous) {
-    $path = if ($ou -eq "_Terminalserver") { $serverpath } else { $parentpath }
-    New-ADOrganizationalUnit -Name $ou -Path $path -ErrorAction SilentlyContinue
-}
+New-ADOrganizationalUnit -Name $firstou -Path $defaultpartition
+New-ADOrganizationalUnit -Name "_Clients" -Path $parentpath
+New-ADOrganizationalUnit -Name "_Server" -Path $parentpath
+New-ADOrganizationalUnit -Name "_Terminalserver" -Path $serverpath
+New-ADOrganizationalUnit -Name "_User" -Path $parentpath
+New-ADOrganizationalUnit -Name "_Gruppen" -Path $parentpath
+New-ADOrganizationalUnit -Name "_Verteilung" -Path $grouppath
+New-ADOrganizationalUnit -Name "_Sicherheit" -Path $grouppath
+New-ADOrganizationalUnit -Name "_Projekte" -Path $grouppath
+New-ADOrganizationalUnit -Name "_Archiv" -Path $grouppath
 
 # Gruppenliste definieren
 $gruppen = @("Vertrieb", "Marketing", "Einkauf", "Lager", "IT", "Vorstand", "Buchhaltung")
