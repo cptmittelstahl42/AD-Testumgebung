@@ -155,7 +155,7 @@ New-ADOrganizationalUnit -Name "_Projekte" -Path $grouppath
 New-ADOrganizationalUnit -Name "_Archiv" -Path $grouppath
 
 # Gruppenliste definieren
-$gruppen = @("Vertrieb", "Marketing", "Einkauf", "Lager", "IT", "Vorstand", "Buchhaltung")
+$gruppen = @("Vertrieb", "Marketing", "Einkauf", "Lager", "IT", "Vorstand", "Buchhaltung", "Personal", "Produktion", "Recht", "Controlling")
 
 # Pfad zur OU _Sicherheit definieren
 $sicherheitsgruppenPath = "OU=_Sicherheit,$grouppath"
